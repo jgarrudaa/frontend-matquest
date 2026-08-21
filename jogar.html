@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="theme-color" content="#101451">
+    <title>
+      Desafio — TriQuest
+    </title>
+    <link rel="icon" href="assets/logo.svg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body class="page-quiz">
+    <div class="app-shell quiz-app">
+      <header class="site-header">
+        <a class="brand" href="inicio.html">
+          <img src="assets/logo.svg" alt="" width="38" height="38">
+          <span>
+            <b>
+              TRI
+            </b>
+            Q
+            <b>
+              UEST
+            </b>
+          </span>
+        </a>
+        <nav class="desktop-nav">
+          <a href="inicio.html">
+            Início
+          </a>
+          <a class="active" href="jogar.html">
+            Jogar
+          </a>
+          <a href="regras.html">
+            Instruções
+          </a>
+        </nav>
+        <div class="header-actions">
+          <span class="user-chip" id="user-chip">
+            Estudante
+          </span>
+          <button class="icon-button" id="logout-button" type="button">
+            ↪
+          </button>
+        </div>
+      </header>
+      <main id="conteudo" class="quiz-layout">
+        <aside class="quiz-map">
+          <header class="quiz-map__heading">
+            <span class="eyebrow">
+              Rodada atual
+            </span>
+            <h2 id="round-title">
+              Desafio misto
+            </h2>
+          </header>
+          <div class="quiz-map__track">
+            <div class="map-progress">
+              <i id="map-progress">
+              </i>
+            </div>
+            <ol id="question-map">
+            </ol>
+          </div>
+          <a class="quiz-map__back" href="inicio.html">
+            <span>
+              ←
+            </span>
+            <span>
+              Voltar ao início
+            </span>
+          </a>
+        </aside>
+        <section class="quiz-stage" aria-live="polite">
+          <header class="quiz-status">
+            <a href="inicio.html" class="back-mobile">
+              ‹
+            </a>
+            <div>
+              <span id="question-counter">
+                Pergunta 1 de 10
+              </span>
+              <div class="progress">
+                <i id="quiz-progress">
+                </i>
+              </div>
+            </div>
+            <span class="lives" id="lives">
+              ♥ ♥ ♥
+              <b>
+                3/3
+              </b>
+            </span>
+          </header>
+          <article class="question-card skeleton" id="question-card">
+            <span class="question-topic" id="question-topic">
+              Carregando
+            </span>
+            <h1 id="question-text">
+              Preparando seu desafio...
+            </h1>
+          </article>
+          <div class="options" id="options" role="radiogroup">
+          </div>
+          <aside class="hint-box oracle-box" id="hint-box" hidden>
+            <img src="assets/mascote_apontando.svg" alt="Mascote do Oráculo">
+            <div>
+              <b>
+                Orientação do Oráculo
+              </b>
+              <span id="hint-text">
+              </span>
+            </div>
+          </aside>
+          <footer class="quiz-actions">
+            <button class="button button-hint" id="hint-button" type="button">
+              Dica
+            </button>
+            <button class="button button-primary" id="answer-button" type="button" disabled>
+              Responder
+            </button>
+          </footer>
+        </section>
+      </main>
+    </div>
+    <div id="toast" class="toast" hidden>
+    </div>
+    <script src="js/api.js">
+    </script>
+    <script src="js/game-engine.js">
+    </script>
+    <script src="js/app.js" defer>
+    </script>
+    <script src="js/game.js" defer>
+    </script>
+  </body>
+</html>

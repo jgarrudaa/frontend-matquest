@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="theme-color" content="#101451">
+    <title>
+      Início — TriQuest
+    </title>
+    <link rel="icon" href="assets/logo.svg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body class="page-home">
+    <div class="app-shell">
+      <header class="site-header">
+        <a class="brand" href="inicio.html">
+          <img src="assets/logo.svg" alt="" width="38" height="38">
+          <span>
+            <b>
+              TRI
+            </b>
+            Q
+            <b>
+              UEST
+            </b>
+          </span>
+        </a>
+        <nav class="desktop-nav">
+          <a class="active" href="inicio.html">
+            Início
+          </a>
+          <a href="jogar.html">
+            Jogar
+          </a>
+          <a href="regras.html">
+            Instruções
+          </a>
+        </nav>
+        <div class="header-actions">
+          <span class="user-chip" id="user-chip">
+            Estudante
+          </span>
+          <button class="icon-button" id="logout-button" type="button" aria-label="Sair">
+            ↪
+          </button>
+        </div>
+      </header>
+      <main id="conteudo" class="dashboard">
+        <section class="hero-panel">
+          <div>
+            <span class="eyebrow">
+              Reino de Triangulia
+            </span>
+            <h1>
+              Olá,
+              <span data-user-name>
+                Estudante
+              </span>
+              .
+            </h1>
+            <p>
+              Pronto para transformar ângulos em diversão?
+            </p>
+            <a href="jogar.html?new=1" class="button button-primary play-button">
+              <span>
+                ▶
+              </span>
+              Jogar agora
+            </a>
+          </div>
+          <img src="assets/mascote_apontando.svg" alt="Mascote TriQuest apontando para os desafios">
+          <div class="hero-shape">
+          </div>
+        </section>
+        <section class="themes-section">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">
+                Trilha de aprendizado
+              </span>
+              <h2>
+                Escolha um tema
+              </h2>
+            </div>
+            <a href="jogar.html?new=1">
+              Ver todos →
+            </a>
+          </div>
+          <div class="theme-grid">
+            <a class="theme-card indigo" href="jogar.html?topic=seno&new=1" data-topic-card="seno">
+              <span class="triangle-icon">
+                △
+              </span>
+              <div>
+                <h3>
+                  Seno
+                </h3>
+                <p>
+                  Cateto oposto e hipotenusa
+                </p>
+              </div>
+              <div class="progress">
+                <i>
+                </i>
+              </div>
+              <small class="mastery-label">
+                0% dominado
+              </small>
+            </a>
+            <a class="theme-card teal" href="jogar.html?topic=cosseno&new=1" data-topic-card="cosseno">
+              <span class="triangle-icon">
+                ◿
+              </span>
+              <div>
+                <h3>
+                  Cosseno
+                </h3>
+                <p>
+                  Cateto adjacente e hipotenusa
+                </p>
+              </div>
+              <div class="progress">
+                <i>
+                </i>
+              </div>
+              <small class="mastery-label">
+                0% dominado
+              </small>
+            </a>
+            <a class="theme-card gold" href="jogar.html?topic=tangente&new=1" data-topic-card="tangente">
+              <span class="triangle-icon">
+                ◺
+              </span>
+              <div>
+                <h3>
+                  Tangente
+                </h3>
+                <p>
+                  Relação entre os catetos
+                </p>
+              </div>
+              <div class="progress">
+                <i>
+                </i>
+              </div>
+              <small class="mastery-label">
+                0% dominado
+              </small>
+            </a>
+            <a class="theme-card coral" href="jogar.html?topic=razoes&new=1" data-topic-card="razoes">
+              <span class="triangle-icon">
+                ⟁
+              </span>
+              <div>
+                <h3>
+                  Razões no triângulo
+                </h3>
+                <p>
+                  Lados, alturas e distâncias
+                </p>
+              </div>
+              <div class="progress">
+                <i>
+                </i>
+              </div>
+              <small class="mastery-label">
+                0% dominado
+              </small>
+            </a>
+          </div>
+        </section>
+        <aside class="dashboard-side">
+          <article class="daily-card">
+            <div>
+              <span class="eyebrow">
+                Recompensa diária
+              </span>
+              <h2>
+                Desafio diário
+              </h2>
+              <p>
+                Resolva uma nova rodada de 10 questões e evolua seu domínio.
+              </p>
+              <a class="button button-light" href="jogar.html?new=1">
+                Aceitar desafio
+              </a>
+            </div>
+            <img src="assets/desafio_diario.svg" alt="Presente do desafio diário">
+          </article>
+          <article class="stats-card">
+            <span class="eyebrow">
+              Seu progresso
+            </span>
+            <div class="stats-row">
+              <div>
+                <b id="stat-score">
+                  0
+                </b>
+                <span>
+                  pontos
+                </span>
+              </div>
+              <div>
+                <b id="stat-correct">
+                  0
+                </b>
+                <span>
+                  acertos
+                </span>
+              </div>
+              <div>
+                <b id="stat-streak">
+                  0
+                </b>
+                <span>
+                  sequência
+                </span>
+              </div>
+            </div>
+          </article>
+        </aside>
+      </main>
+      <nav class="mobile-nav">
+        <a class="active" href="inicio.html">
+          <span>
+            ⌂
+          </span>
+          Início
+        </a>
+        <a href="jogar.html">
+          <span>
+            △
+          </span>
+          Jogar
+        </a>
+        <a href="regras.html">
+          <span>
+            ✎
+          </span>
+          Instruções
+        </a>
+        <button id="mobile-profile">
+          <span>
+            ♙
+          </span>
+          Perfil
+        </button>
+      </nav>
+    </div>
+    <div id="toast" class="toast" hidden>
+    </div>
+    <script src="js/api.js">
+    </script>
+    <script src="js/game-engine.js">
+    </script>
+    <script src="js/app.js" defer>
+    </script>
+  </body>
+</html>

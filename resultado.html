@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>
+      Resultado — TriQuest
+    </title>
+    <link rel="icon" href="assets/logo.svg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body class="page-result">
+    <main id="conteudo" class="result-shell">
+      <section class="result-card">
+        <a class="result-back" href="inicio.html">
+          ← Início
+        </a>
+        <span class="result-kicker" id="result-kicker">
+        </span>
+        <h1 id="result-title">
+          Resultado
+        </h1>
+        <img id="result-mascot" src="assets/mascote_feliz.svg" data-happy="assets/mascote_feliz.svg" data-sad="assets/mascote_triste.svg" alt="Mascote TriQuest">
+        <p id="result-message">
+        </p>
+        <strong id="result-score">
+        </strong>
+        <p class="result-explanation" id="result-explanation">
+        </p>
+        <div class="result-actions">
+          <button class="button button-primary" id="result-primary">
+            Continuar
+          </button>
+          <a class="button button-secondary" href="inicio.html">
+            Voltar ao início
+          </a>
+        </div>
+      </section>
+    </main>
+    <div id="toast" class="toast" hidden>
+    </div>
+    <script src="js/api.js">
+    </script>
+    <script src="js/game-engine.js">
+    </script>
+    <script src="js/app.js">
+    </script>
+    <script src="js/result.js">
+    </script>
+  </body>
+</html>

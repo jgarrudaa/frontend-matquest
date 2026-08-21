@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="theme-color" content="#101451">
+    <meta name="description" content="TriQuest — aprenda razões trigonométricas jogando.">
+    <title>
+      TriQuest — Trigonometria com diversão
+    </title>
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body class="page-landing">
+    <a class="skip-link" href="#conteudo">
+      Pular para o conteúdo
+    </a>
+    <main id="conteudo" class="landing-shell">
+      <section class="landing-copy">
+        <div class="landing-brand">
+          <img src="assets/logo.svg" alt="Símbolo triangular do TriQuest">
+          <h1>
+            <span>
+              TRI
+            </span>
+            QUEST
+          </h1>
+        </div>
+        <p class="eyebrow">
+          Uma aventura pelo Reino de Triangulia
+        </p>
+        <h2>
+          Transforme ângulos em
+          <em>
+            conquistas.
+          </em>
+        </h2>
+        <p class="landing-description">
+          Aprenda seno, cosseno e tangente em desafios rápidos, com dicas, vidas e recompensas.
+        </p>
+        <div class="landing-actions">
+          <a class="button button-primary" href="entrar.html">
+            Entrar
+          </a>
+          <a class="button button-secondary" href="cadastro.html">
+            Criar conta
+          </a>
+        </div>
+      </section>
+      <aside class="landing-preview" aria-label="Prévia do jogo">
+        <div class="orbit orbit-one">
+        </div>
+        <div class="orbit orbit-two">
+        </div>
+        <img src="assets/mascote_apontando.svg" alt="Mascote triangular do TriQuest apontando">
+        <div class="formula-card">
+          <span>
+            sen(θ)
+          </span>
+          <b>
+            oposto ÷ hipotenusa
+          </b>
+        </div>
+        <div class="formula-card formula-card-alt">
+          <span>
+            cos(θ)
+          </span>
+          <b>
+            adjacente ÷ hipotenusa
+          </b>
+        </div>
+      </aside>
+    </main>
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden>
+    </div>
+    <script src="js/api.js">
+    </script>
+    <script src="js/game-engine.js">
+    </script>
+    <script src="js/app.js" defer>
+    </script>
+  </body>
+</html>

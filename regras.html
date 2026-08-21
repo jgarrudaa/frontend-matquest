@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>
+      Instruções — TriQuest
+    </title>
+    <link rel="icon" href="assets/logo.svg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body class="page-rules">
+    <div class="app-shell">
+      <header class="site-header">
+        <a class="brand" href="inicio.html">
+          <img src="assets/logo.svg" alt="" width="38" height="38">
+          <span>
+            <b>
+              TRI
+            </b>
+            Q
+            <b>
+              UEST
+            </b>
+          </span>
+        </a>
+        <nav class="desktop-nav">
+          <a href="inicio.html">
+            Início
+          </a>
+          <a href="jogar.html">
+            Jogar
+          </a>
+          <a class="active" href="regras.html">
+            Instruções
+          </a>
+        </nav>
+        <div class="header-actions">
+          <span class="user-chip" id="user-chip">
+            Estudante
+          </span>
+          <button class="icon-button" id="logout-button" type="button">
+            ↪
+          </button>
+        </div>
+      </header>
+      <main id="conteudo" class="rules-layout">
+        <header class="rules-intro">
+          <span class="eyebrow">
+            Manual do estudante
+          </span>
+          <h1>
+            Como jogar
+          </h1>
+          <p>
+            Revise seno, cosseno, tangente e razões no triângulo em rodadas de 10 desafios.
+          </p>
+        </header>
+        <section class="rule-grid">
+          <article>
+            <span>
+              01
+            </span>
+            <h2>
+              Leia o desafio
+            </h2>
+            <p>
+              Observe as medidas e identifique os lados.
+            </p>
+          </article>
+          <article>
+            <span>
+              02
+            </span>
+            <h2>
+              Escolha a razão
+            </h2>
+            <p>
+              <b>
+                Seno
+              </b>
+              = oposto ÷ hipotenusa
+              <br>
+              <b>
+                Cosseno
+              </b>
+              = adjacente ÷ hipotenusa
+              <br>
+              <b>
+                Tangente
+              </b>
+              = oposto ÷ adjacente
+            </p>
+          </article>
+          <article>
+            <span>
+              03
+            </span>
+            <h2>
+              Proteja suas vidas
+            </h2>
+            <p>
+              Cada rodada começa com três vidas. Um erro remove uma vida e permite tentar novamente.
+            </p>
+          </article>
+          <article>
+            <span>
+              04
+            </span>
+            <h2>
+              Ganhe pontos
+            </h2>
+            <p>
+              Acerto sem dica vale 100 pontos e com dica vale 50 pontos.
+            </p>
+          </article>
+        </section>
+        <section class="worlds">
+          <h2>
+            Como funciona uma rodada
+          </h2>
+          <div>
+            <article>
+              <b>
+                10 desafios
+              </b>
+              <h3>
+                Seleção aleatória
+              </h3>
+              <p>
+                Cada nova rodada traz uma combinação diferente.
+              </p>
+            </article>
+            <article>
+              <b>
+                700 pontos
+              </b>
+              <h3>
+                Meta de vitória
+              </h3>
+              <p>
+                Alcance pelo menos 700 pontos.
+              </p>
+            </article>
+            <article>
+              <b>
+                4 temas
+              </b>
+              <h3>
+                Prática direcionada
+              </h3>
+              <p>
+                Escolha um tema ou jogue uma rodada mista.
+              </p>
+            </article>
+          </div>
+        </section>
+        <a class="button button-primary rules-back" href="inicio.html">
+          Voltar ao início
+        </a>
+      </main>
+      <nav class="mobile-nav">
+        <a href="inicio.html">
+          <span>
+            ⌂
+          </span>
+          Início
+        </a>
+        <a href="jogar.html">
+          <span>
+            △
+          </span>
+          Jogar
+        </a>
+        <a class="active" href="regras.html">
+          <span>
+            ✎
+          </span>
+          Instruções
+        </a>
+        <button id="mobile-profile">
+          <span>
+            ♙
+          </span>
+          Perfil
+        </button>
+      </nav>
+    </div>
+    <div id="toast" class="toast" hidden>
+    </div>
+    <script src="js/api.js">
+    </script>
+    <script src="js/game-engine.js">
+    </script>
+    <script src="js/app.js" defer>
+    </script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="theme-color" content="#101451">
+    <title>
+      Entrar — TriQuest
+    </title>
+    <link rel="icon" href="assets/logo.svg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body class="page-login">
+    <main id="conteudo" class="auth-shell">
+      <a class="auth-brand" href="index.html">
+        <img src="assets/logo.svg" alt="">
+        <span>
+          <b>
+            TRI
+          </b>
+          QUEST
+        </span>
+      </a>
+      <section class="auth-card">
+        <div class="auth-heading">
+          <span class="eyebrow">
+            Continue sua jornada
+          </span>
+          <h1>
+            Que bom ver você
+          </h1>
+          <p>
+            Entre para continuar de onde parou.
+          </p>
+        </div>
+        <form id="auth-form" data-mode="login" novalidate>
+          <label>
+            E-mail
+            <input id="email" name="email" type="email" autocomplete="email" required placeholder="voce@exemplo.com">
+          </label>
+          <label>
+            Senha
+            <input id="password" name="password" type="password" autocomplete="current-password" minlength="6" required placeholder="Mínimo de 6 caracteres">
+          </label>
+          <p id="form-message" class="form-message" role="alert">
+          </p>
+          <button class="button button-primary" type="submit">
+            <span>
+              Entrar
+            </span>
+            <i class="button-loader" hidden>
+            </i>
+          </button>
+        </form>
+        <p class="auth-switch">
+          Ainda não tem uma conta?
+          <a href="cadastro.html">
+            Cadastre-se
+          </a>
+        </p>
+      </section>
+      <aside class="auth-art">
+        <img src="assets/mascote_feliz.svg" alt="Mascote TriQuest feliz">
+        <p>
+          Seu progresso fica salvo em qualquer dispositivo.
+        </p>
+      </aside>
+    </main>
+    <div id="toast" class="toast" hidden>
+    </div>
+    <script src="js/api.js">
+    </script>
+    <script src="js/game-engine.js">
+    </script>
+    <script src="js/app.js" defer>
+    </script>
+    <script src="js/auth.js" defer>
+    </script>
+  </body>
+</html>

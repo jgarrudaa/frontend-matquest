@@ -53,6 +53,8 @@ Também é possível usar uma extensão de servidor estático, como Live Server.
 | `resultado.html` | Resultado da resposta ou rodada |
 | `regras.html` | Instruções do jogo |
 | `404.html` | Página não encontrada |
+| `verificar-email.html` | Orientação após o cadastro |
+| `email-confirmado.html` | Confirmação concluída ou link inválido |
 
 ## Estrutura
 

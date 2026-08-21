@@ -17,8 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         : await window.Api.login(email, password);
       const token = data.access_token || data.session?.access_token;
       if (!token) {
-        message.className = 'form-message success';
-        message.textContent = 'Cadastro criado. Confira seu e-mail para confirmar a conta.';
+        location.href = `verificar-email.html?email=${encodeURIComponent(email)}`;
         return;
       }
       window.Api.token = token;

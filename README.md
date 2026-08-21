@@ -15,7 +15,7 @@ Interface estática do TriQuest, construída com HTML, CSS e JavaScript. O front
 O front-end está configurado para consumir a API publicada na Vercel:
 
 ```javascript
-const API_BASE_URL = "https://backend-matquest-2l74.vercel.app";
+const API_BASE_URL = "https://backend-matquest.vercel.app";
 ```
 
 Para executar com um back-end local, altere temporariamente o valor para:

@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://backend-matquest-2l74.vercel.app';
+const API_BASE_URL = 'https://backend-matquest.vercel.app';
 
 const Api = {
   tokenKey: 'triquest_access_token',

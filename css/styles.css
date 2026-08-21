@@ -152,7 +152,7 @@ a {
   text-decoration: none;
   font-size: 1.08rem;
   font-weight: 900;
-  letter-spacing: .03em;
+  letter-spacing: .03rem;
 }
 
 .brand img {
@@ -1380,6 +1380,7 @@ a {
   }
   .hero-panel h1 {
     font-size: 2rem;
+    letter-spacing: .015em;
   }
   .hero-panel p {
     max-width: 14rem;
@@ -1388,6 +1389,7 @@ a {
   .hero-panel img {
     height: 90%;
     right: 0;
+    bottom: -4%;
   }
   .themes-section {
     padding: 1.2rem .7rem;

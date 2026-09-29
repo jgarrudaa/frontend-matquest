@@ -18,6 +18,12 @@ const Api = {
   signup(name, email, password) {
     return this.request('/api/auth/signup', { method: 'POST', body: JSON.stringify({ name, email, password }) });
   },
+  resendConfirmation(email) {
+    return this.request('/api/auth/resend-confirmation', {
+      method: 'POST',
+      body: JSON.stringify({ email }),
+    });
+  },
   login(email, password) {
     return this.request('/api/auth/login', { method: 'POST', body: JSON.stringify({ email, password }) });
   },

@@ -22,15 +22,56 @@
         <img class="verification-mascot" src="assets/mascote_apontando.svg" alt="Mascote MatQuest apontando">
         <span class="eyebrow">Só falta um passo</span>
         <h1 id="verification-title">Verifique seu e-mail</h1>
-        <p>Enviamos um link de confirmação para:</p>
-        <strong id="verification-email">seu endereço de e-mail</strong>
+        <p>Confirme seu endereço de e-mail para acessar sua conta:</p>
+        <form id="confirmation-resend-form" class="verification-resend" novalidate>
+          <label for="verification-email">E-mail</label>
+          <input id="verification-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+          <p id="resend-message" class="form-message" role="status" aria-live="polite"></p>
+          <button class="button button-primary" type="submit">
+            <span>Reenviar link de confirmação</span>
+            <i class="button-loader" hidden></i>
+          </button>
+        </form>
         <p class="verification-help">Abra a mensagem do MatQuest e clique em <b>Confirmar minha conta</b>. Confira também a pasta de spam.</p>
         <a class="button button-secondary" href="entrar.html">Voltar para entrar</a>
       </section>
     </main>
+    <script src="js/api.js"></script>
     <script>
-      const email = new URLSearchParams(location.search).get('email');
-      if (email) document.querySelector('#verification-email').textContent = email;
+      document.addEventListener('DOMContentLoaded', () => {
+        const emailInput = document.querySelector('#verification-email');
+        const form = document.querySelector('#confirmation-resend-form');
+        const message = document.querySelector('#resend-message');
+        const submit = form.querySelector('button[type="submit"]');
+        const loader = submit.querySelector('.button-loader');
+        const email = new URLSearchParams(location.search).get('email');
+
+        if (email) emailInput.value = email;
+
+        form.addEventListener('submit', async (event) => {
+          event.preventDefault();
+          if (submit.disabled) return;
+          if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+          }
+
+          message.className = 'form-message';
+          message.textContent = '';
+          submit.disabled = true;
+          loader.hidden = false;
+          try {
+            const result = await window.Api.resendConfirmation(emailInput.value.trim());
+            message.classList.add('success');
+            message.textContent = result.message;
+          } catch (error) {
+            message.textContent = error.message;
+          } finally {
+            submit.disabled = false;
+            loader.hidden = true;
+          }
+        });
+      });
     </script>
   </body>
 </html>

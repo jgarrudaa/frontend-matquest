@@ -25,6 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if (name) localStorage.setItem('triquest_name', name);
       location.href = 'inicio.html';
     } catch (error) {
+      if (error.message.toLowerCase().includes('email not confirmed')) {
+        location.href = `verificar-email.html?email=${encodeURIComponent(form.email.value.trim())}`;
+        return;
+      }
       const translations = { 'Invalid login credentials': 'E-mail ou senha incorretos.', 'User already registered': 'Este e-mail já possui uma conta.' };
       message.textContent = translations[error.message] || error.message;
     } finally { submit.disabled = false; loader.hidden = true; }
